@@ -21,6 +21,8 @@ body {
     --color-black: #152427;
     --color-light-green: #e2eddf;
     --color-light-gray: #7d8188;
+    --color-gray: #6a8383;
+    --color-blue: #83A17D;
 }
 
 /* common */
@@ -335,6 +337,7 @@ a {
     font-weight: 600;
     line-height: 1.23;
 }
+.project__heading::after,
 .process__heading::after,
 .service__heading::after {
     content: "";
@@ -478,7 +481,6 @@ a {
     left: 46px;
     z-index: 10;
 }
-
 
 .about__flower {
     position: absolute;
@@ -715,4 +717,72 @@ a {
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 1.55;
+}
+
+/* project */
+.project {
+    position: relative;
+    background-color: var(--primary-color);
+    padding: 116px 0px 63px;
+    margin-top: 50px;
+}
+
+.project__row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project__heading {
+    max-width: 457px;
+    color: #e7f9f9;
+}
+
+.project__heading::after {
+    left: 294px;
+    background-color: var(--color-blue);
+}
+
+.project__content {
+    max-width: 590px;
+}
+
+.project__desc {
+    color: var(--color-gray);
+    font-family: "Public Sans";
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.55;
+}
+
+.project__more {
+    margin-top: 13px;
+    margin-right: 26px;
+    color: #fff;
+}
+
+.project__arrow {
+    cursor: pointer;
+    color: #80A07B;
+}
+
+.project__video {
+    margin-top: 65px;
+}
+
+.project__video--play {
+    width: 1140px;
+    height: 544px;
+    border-radius: 22px;
+}
+
+.project__decor {
+    position: absolute;
+    top: 56px;
+    right: 32px;
+}
+
+.project__flower {
+    position: absolute;
+    right: -26px;
+    top: 94px;
 }
