@@ -26,6 +26,13 @@ body {
 }
 
 /* common */
+.line-clamp {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  
 a {
     text-decoration: none;
 }
@@ -337,6 +344,8 @@ a {
     font-weight: 600;
     line-height: 1.23;
 }
+
+.blog__heading::after,
 .project__heading::after,
 .process__heading::after,
 .service__heading::after {
@@ -755,6 +764,7 @@ a {
 }
 
 .project__more {
+    display: inline-block;
     margin-top: 13px;
     margin-right: 26px;
     color: #fff;
@@ -789,7 +799,7 @@ a {
 
 /* feature */
 .feature {
-    margin-top: 75px;
+    margin-top: 65px;
     padding: 75px 0px;
 }
 
@@ -818,7 +828,7 @@ a {
 }
 
 .feature-item {
-    cursor:pointer;
+    cursor: pointer;
     background: #fff;
     width: calc(33.3333% - 45px);
     max-height: 362px;
@@ -848,4 +858,102 @@ a {
     font-size: 1.4rem;
     font-weight: 500;
     line-height: 1.72;
+}
+
+/* blog */
+.blog {
+    margin-top: 45px;
+    padding: 65px 0px;
+}
+
+.blog__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.blog__heading {
+    max-width: 520px;
+}
+
+.blog__heading::after {
+    left: 489px;
+}
+
+.blog__desc {
+    width: 409px;
+    color: var(--color-light-gray);
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.62;
+}
+
+.blog__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0px 30px;
+    margin-top: 90px;
+}
+
+.blog-item {
+    background-color: var(--white-color);
+}
+
+.blog-item:hover .blog__content {
+    padding-left: 30px;
+    border-radius: 0px 0px 20px 20px;
+    background-color: var(--white-color);
+    box-shadow: 0px 12px 74px 0px rgba(91, 91, 91, 0.25);
+}
+
+.blog-item:hover .blog-item__story {
+    color: var(--color-light-green);
+    background-color: var(--primary-color);
+}
+
+.blog-item__img {
+    width: 100%;
+    height: 317px;
+    border-radius: 40px 40px 0px 0px;
+    transition: all ease 0.25s;
+}
+
+.blog__content {
+    transition: all ease 0.25s;
+    padding: 26px 14px 12px 0px;
+}
+
+.blog-item__story {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 107px;
+    height: 26px;
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 1rem;
+    color: #000;
+    background-color: var(--color-light-green);
+    border-radius: 20px;
+}
+
+.blog-item__desc {
+    max-height: 90px;
+    margin-top: 13px;
+    padding-bottom: 38px;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.66;
+    border-bottom: 1px solid #c4c4c4;
+}
+
+.blog-item__date {
+    display: block;
+    text-align: right;
+    margin-top: 16px;
+    color: var(--text-color-black-gray);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.2;
 }
